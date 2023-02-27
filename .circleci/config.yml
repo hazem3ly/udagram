@@ -17,6 +17,10 @@ jobs:
       - checkout
       # Use root level package.json to install dependencies in the frontend app
       - run:
+          name: SETUP ENV
+          command: |
+            npm run setup-env
+      - run:
           name: Install Front-End Dependencies
           command: |
             echo "NODE --version" 
@@ -54,6 +58,11 @@ jobs:
       - eb/setup
       - aws-cli/setup
       - checkout
+      - run:
+          name: SETUP ENV
+          command: |
+            npm run setup-env
+
       - run:
           name: Deploy
           command: |
