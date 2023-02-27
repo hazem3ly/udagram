@@ -22,6 +22,9 @@ In this project we will use CircleCi to create pipeline that will build and depl
 ![S3](./screenshots/circleci_build.png)
 ![S3](./screenshots/circleci_deploy.png)
 
+- CircleCi secrets
+![Secrets](./screenshots/secrts.png)
+
 [APP URL](http://udagram-udacity.s3-website-us-east-1.amazonaws.com/)
 
 ![WORKING APP](./screenshots/working_app.png)
