@@ -1,26 +1,34 @@
 # Hosting a Full-Stack Application
 
-### **You can use you own project completed in previous courses or use the provided Udagram app for completing this final project.**
+## Overview
 
----
+In this project we will use CircleCi to create pipeline that will build and deploy front and backend of our application using AWS services.
 
-In this project you will learn how to take a newly developed Full-Stack application built for a retailer and deploy it to a cloud service provider so that it is available to customers. You will use the aws console to start and configure the services the application needs such as a database to store product information and a web server allowing the site to be discovered by potential customers. You will modify your package.json scripts and replace hard coded secrets with environment variables in your code.
+### AWS Services Used
 
-After the initial setup, you will learn to interact with the services you started on aws and will deploy manually the application a first time to it. As you get more familiar with the services and interact with them through a CLI, you will gradually understand all the moving parts.
+- RDS for the database
+![RDS](./screenshots/rds.png)
 
-You will then register for a free account on CircleCi and connect your Github account to it. Based on the manual steps used to deploy the app, you will write a config.yml file that will make the process reproducible in CircleCi. You will set up the process to be executed automatically based when code is pushed on the main Github branch.
+- ElasticBeanstalk for the (backend) API deployment
+![ElasticBeanstalk](./screenshots/eb.png)
 
-The project will also include writing documentation and runbooks covering the operations of the deployment process. Those runbooks will serve as a way to communicate with future developers and anybody involved in diagnosing outages of the Full-Stack application.
+- S3 for (frontend) web hosting
+![S3](./screenshots/s3.png)
 
-# Udagram
+### Circleci
 
-This application is provided to you as an alternative starter project if you do not wish to host your own code done in the previous courses of this nanodegree. The udagram application is a fairly simple application that includes all the major components of a Full-Stack web application.
+- We used circleci for ci/cd proccess
+![S3](./screenshots/circleci_overview.png)
+![S3](./screenshots/circleci_build.png)
+![S3](./screenshots/circleci_deploy.png)
 
+[APP URL](http://udagram-udacity.s3-website-us-east-1.amazonaws.com/)
 
+![WORKING APP](./screenshots/working_app.png)
 
 ### Dependencies
 
-```
+```text
 - Node v14.15.1 (LTS) or more recent. While older versions can work it is advisable to keep node to latest LTS version
 
 - npm 6.14.8 (LTS) or more recent, Yarn can work but was not tested for this project
@@ -53,11 +61,11 @@ This project contains two different test suite: unit tests and End-To-End tests(
 
 There are no Unit test on the back-end
 
-### Unit Tests:
+### Unit Tests
 
 Unit tests are using the Jasmine Framework.
 
-### End to End Tests:
+### End to End Tests
 
 The e2e tests are using Protractor and Jasmine.
 
